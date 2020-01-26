@@ -18,7 +18,8 @@ export class TodayComponent implements OnInit {
 
   ngOnInit() {
     //this.currentDate = this.datePipe.transform(new Date(), 'EEEE');
-    this.currentDate = "Monday";
+    // hard-coded for demo
+    this.currentDate = "Tuesday";
   }
 
   isFriday(): boolean {
