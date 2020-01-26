@@ -1,6 +1,7 @@
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
+    font-weight: 300;
     text-align: center;
     color: #333;
     box-sizing: border-box;
@@ -9,12 +10,12 @@
   }
 
 .greeting {
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 100px;
 }
 
 .descriptionPrompt {
-    font-size: 20px;  
+    font-size: 30px;  
     margin-top: 250px;
 }
 
