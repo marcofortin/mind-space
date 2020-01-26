@@ -5,6 +5,7 @@ import { TodayComponent } from './today/today.component';
 
 
 const routes: Routes = [
+  {path: '', component: TodayComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'today', component: TodayComponent}
 ];
