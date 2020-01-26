@@ -20,7 +20,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodayComponent implements OnInit {
   // variable
+  greeting:string = "Today!";
+  prompt:string = "Describe your day in five words!";
   keywords:string;
+  placeholder:string = "Enter a space between each word";
 
   constructor() { }
 

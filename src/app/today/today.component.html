@@ -1,4 +1,4 @@
 <div></div>
-<div class="greeting">Today!</div>
-<div class="descriptionPrompt">Describe your day in five words!</div>
-<input type="text" class="descriptionInput" placeholder="Enter a space between each word" [(ngModel)]="keywords" (keydown.enter)="onClick()">
+<div class="greeting">{{greeting}}</div>
+<div class="descriptionPrompt">{{prompt}}</div>
+<input type="text" class="descriptionInput" [placeholder]="placeholder" [(ngModel)]="keywords" (keydown.enter)="onClick()">
