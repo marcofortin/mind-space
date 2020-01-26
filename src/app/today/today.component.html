@@ -1,4 +1,6 @@
 <div></div>
-<div class="greeting">{{greeting}}</div>
+<div *ngIf="!(isFriday() || isMonday())" class="greeting">My {{currentDate}}!</div>
+<div *ngIf="isFriday()" class="greeting">Thank god it's {{currentDate}}!</div>
+<div *ngIf="isMonday()" class="greeting">Let's crush this {{currentDate}}!</div>
 <div class="descriptionPrompt">{{prompt}}</div>
 <input type="text" class="descriptionInput" [placeholder]="placeholder" [(ngModel)]="keywords" (keydown.enter)="onClick()">
