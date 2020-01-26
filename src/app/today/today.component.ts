@@ -19,31 +19,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./today.component.scss']
 })
 export class TodayComponent implements OnInit {
+  // variable
+  keywords:string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  var photoUrl:string;
   
-  function onClick(keywords) {
+  onClick() {
 
-    fetch('https://api.shutterstock.com/v2/images/search?query=' + keywords, {
+    let photoUrl:string = "party";
+
+    fetch('https://api.shutterstock.com/v2/images/search?query=' + this.keywords, {
       headers: {
         Authorization: 'Basic d211NktDdmViTk1leXJ0Z0tBa2JPRXlUejFpa3ZwMnA6RGRacVpNWTZCcUk5dVpQZQ=='
       }
       
     }).then(response => response.json()).then((myJson) => {
       photoUrl = myJson.data[0].assets.preview.url;
+      console.log(photoUrl);
       });
     
-    
   }
-
-  onClick("cash money")
-
-  console.log(photoUrl);
-  
 
 }
