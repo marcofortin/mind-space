@@ -8,7 +8,6 @@ import { DatePipe } from '@angular/common';
 })
 export class DashboardComponent implements OnInit {
   currentDate:string;
-<<<<<<< HEAD
   //monUrl:string = "../../assets/Mon.PNG";
   // hard-coded for demo
   monUrl:string = "https://image.shutterstock.com/display_pic_with_logo/1998197/534464599/stock-photo-stressful-day-at-the-office-young-businessman-holding-hands-on-his-face-while-sitting-at-the-desk-534464599.jpg";
@@ -16,13 +15,6 @@ export class DashboardComponent implements OnInit {
   wedUrl:string = "../../assets/Wed.PNG";
   thuUrl:string = "../../assets/Thu.PNG";
   friUrl:string = "../../assets/Fri.PNG";
-=======
-  monUrl:string = "./assets/Mon.PNG";
-  tueUrl:string = "./assets/Tue.PNG";
-  wedUrl:string = "./assets/Wed.PNG";
-  thuUrl:string = "./assets/Thu.PNG";
-  friUrl:string = "./assets/Fri.PNG";
->>>>>>> d1fbcbdf8711d367a5aa596485c097e80d11ade1
 
   constructor(public datePipe:DatePipe) { }
 
