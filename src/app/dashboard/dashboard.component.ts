@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dasshboard',
@@ -6,10 +7,26 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  currentDate:string;
+  monUrl:string = "../../assets/Mon.PNG";
+  tueUrl:string = "../../assets/Tue.PNG";
+  wedUrl:string = "../../assets/Wed.PNG";
+  thuUrl:string = "../../assets/Thu.PNG";
+  friUrl:string = "../../assets/Fri.PNG";
 
-  constructor() { }
+  constructor(public datePipe:DatePipe) { }
 
   ngOnInit() {
-    console.log(localStorage.getItem("photoUrl"));
+    let updatedUrl = localStorage.getItem("photoUrl");
+    if (updatedUrl) {
+      // this.currentDate = this.datePipe.transform(new Date(), 'EEEE');
+      this.currentDate = "Monday";
+      if (this.currentDate == 'Monday') this.monUrl = updatedUrl;
+      else if (this.currentDate == 'Tuesday') this.tueUrl = updatedUrl;
+      else if (this.currentDate == 'Wednesday') this.wedUrl = updatedUrl;
+      else if (this.currentDate == 'Thursday') this.thuUrl = updatedUrl;
+      else this.friUrl = updatedUrl;
+      localStorage.setItem("photoUrl", "");
+    }
   }
 }
