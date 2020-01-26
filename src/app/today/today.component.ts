@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-today',
@@ -13,7 +14,7 @@ export class TodayComponent implements OnInit {
   placeholder:string = "Enter a space between each word";
   currentDate:string;
 
-  constructor(public datePipe:DatePipe) { }
+  constructor(public datePipe:DatePipe, private router: Router) { }
 
   ngOnInit() {
     this.currentDate = this.datePipe.transform(new Date(), 'EEEE');
@@ -28,7 +29,6 @@ export class TodayComponent implements OnInit {
   }
   
   onClick() {
-
     let photoUrl:string = "party";
 
     fetch('https://api.shutterstock.com/v2/images/search?query=' + this.keywords, {
@@ -38,7 +38,9 @@ export class TodayComponent implements OnInit {
       
     }).then(response => response.json()).then((myJson) => {
       photoUrl = myJson.data[0].assets.preview.url;
+      localStorage.setItem("photoUrl",photoUrl);
       console.log(photoUrl);
+      this.router.navigate(['/dashboard']);
       });
     
   }

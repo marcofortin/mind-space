@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-dasshboard',
@@ -10,7 +10,6 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(localStorage.getItem("photoUrl"));
   }
-
-
 }
