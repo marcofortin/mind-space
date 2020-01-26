@@ -8,11 +8,11 @@ import { DatePipe } from '@angular/common';
 })
 export class DashboardComponent implements OnInit {
   currentDate:string;
-  monUrl:string = "../../assets/Mon.PNG";
-  tueUrl:string = "../../assets/Tue.PNG";
-  wedUrl:string = "../../assets/Wed.PNG";
-  thuUrl:string = "../../assets/Thu.PNG";
-  friUrl:string = "../../assets/Fri.PNG";
+  monUrl:string = "./assets/Mon.PNG";
+  tueUrl:string = "./assets/Tue.PNG";
+  wedUrl:string = "./assets/Wed.PNG";
+  thuUrl:string = "./assets/Thu.PNG";
+  friUrl:string = "./assets/Fri.PNG";
 
   constructor(public datePipe:DatePipe) { }
 
