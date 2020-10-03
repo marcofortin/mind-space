@@ -1,6 +1,7 @@
-# mind-space - developed at ConUHacks V
+# mind-space
+🙇‍♂️ Workspace tool to improve self-reflection and work related stress
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+Developed at ConuHacks V in collaboration with dakadabra, Talark and keithnicholas
 
 ## Development server
 
